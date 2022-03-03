@@ -1,0 +1,23 @@
+#
+services:
+    - serviceId: clubes
+      title: clubes
+      description: Sample Node API
+      catalogUiTileId: clubes
+      instanceBaseUrls:
+        - http://${ZOWE_EXPLORER_HOST}:18000/
+      homePageRelativeUrl:  # Home page is at the same URL
+      routedServices:
+        - gatewayUrl: api/v1  # [api/ui/ws]/v{majorVersion}
+          serviceRelativeUrl:
+      apiInfo:
+        - apiId: com.ibm.clubes
+          gatewayUrl: api/v1
+          version: 1.0.0
+          swaggerUrl: http://${ZOWE_EXPLORER_HOST}:18000/api-docs
+          documentationUrl: http://${ZOWE_EXPLORER_HOST}:18000/api-docs-ui
+
+catalogUiTiles:
+    clubes:
+      title: clubes
+      description: Sample Node API

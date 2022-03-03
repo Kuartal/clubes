@@ -1,0 +1,20 @@
+name: clubes
+id: org.zowe.clubes
+title: Sample Node API
+description: A Sample Node API extension for Zowe
+license: EPL-2.0
+repository:
+  type: git
+  url: https://github.com/zowe/clubes.git
+build:
+  branch: "{{build.branch}}"
+  number: "{{build.number}}"
+  commitHash: "{{build.commitHash}}"
+  timestamp: "{{build.timestamp}}"
+commands:
+  start: bin/start.sh
+apimlServices:
+  static:
+    - file: clubes.yml
+configs:
+  port: 18000
